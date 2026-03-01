@@ -65,12 +65,12 @@ os.makedirs(os.path.dirname(VALID_WEBSITES_PATH), exist_ok=True)
 
 def load_valid_links() -> List[str]:
     if not os.path.exists(VALID_WEBSITES_PATH):
-        return ["teletype.in", "t.me", "vk.com", "ok.ru", "youtube.com", "youtu.be"]
+        return ["teletype.in", "t.me", "vm.tiktok.com", "vk.com", "ok.ru", "youtube.com", "youtu.be"]
     try:
         with open(VALID_WEBSITES_PATH, 'r', encoding='utf-8') as f:
             return json.load(f)
     except:
-        return ["teletype.in", "t.me", "vk.com", "ok.ru", "youtube.com", "youtu.be"]
+        return ["teletype.in", "t.me", "vm.tiktok.com", "vk.com", "ok.ru", "youtube.com", "youtu.be"]
 
 def save_valid_links(links: List[str]):
     with open(VALID_WEBSITES_PATH, 'w', encoding='utf-8') as f:
